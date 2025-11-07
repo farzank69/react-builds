@@ -17,6 +17,10 @@ function MyApp() {
         </div>
     )
 }
+
+const firstElement = (
+    <a href="https://google.com" target='_blank'>Visit Google</a>
+)
 createRoot(document.getElementById('root')).render(
-    MyApp()
+    firstElement
 )
