@@ -6,7 +6,11 @@ function App() {
   const [counter, setCounter]= useState(15)        // hooks
 
   const addValue = () => {
-    setCounter(counter + 1)
+    // setCounter(counter + 1)
+    setCounter((prevcount) => prevcount+1)
+    setCounter((prevcount) => prevcount+1)
+    setCounter((prevcount) => prevcount+1)
+    setCounter((prevcount) => prevcount+1)
     // counter += 1
     // console.log(counter);
     
