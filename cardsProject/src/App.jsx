@@ -1,4 +1,3 @@
-import React from 'react'
 import Card from './components/Card'
 
 const App = () => {
@@ -105,12 +104,13 @@ const App = () => {
       location: "Mumbai, India"
     }
   ];
-  console.log(jobOpenings);
   
   return (
     <div className='parent'>
-      {jobOpenings.map(function(elem){
-        return <Card brandLogo={elem.brandLogo} company={elem.companyName} datePosted={elem.datePosted} location={elem.location} pay={elem.pay} post={elem.post} tag1={elem.tag1} tag2={elem.tag2} />
+      {jobOpenings.map(function(elem, idx){    // key prop -> need to pass the key so the array element can be deferentiated.
+        return <div key={idx}>
+          <Card brandLogo={elem.brandLogo} company={elem.companyName} datePosted={elem.datePosted} location={elem.location} pay={elem.pay} post={elem.post} tag1={elem.tag1} tag2={elem.tag2} />
+          </div>
       })}
       
     </div>
