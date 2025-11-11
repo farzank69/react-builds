@@ -1,34 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  // const btnClicked = () => {
+  //   console.log('The button has been clicked.'); 
+  // }
 
+  // const inputChange = (val)=>{
+  //   console.log(val)
+  // }
+
+  const onScrolling = (speed) => {
+    console.log('mouse scrolling.... at speed', speed );
+    
+  }
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    // <div>
+    //   <h1>Hello Everyone!</h1>
+    //   <button onClick={()=>{
+    //     console.log('Button clicked');
+    //   }}>Change User</button>
+
+    //   {/* <input onChange={(elem)=>{
+    //     console.log(elem.target.value);
+    //   }} type="text" placeholder='Enter Name' /> */}
+
+ 
+    //   <input onChange={function(elem){
+    //     inputChange(elem.target.value)
+    //   }} type="text" placeholder='Enter Name' />
+    // </div>
+    // Another div to just practice.
+    // <div>
+    //   <div className='box'
+    //   onMouseMove={(elem) => {
+    //     console.log(elem.clientX)
+    //   }}
+    //   >
+    //   </div>
+    // </div>
+
+    // Mouse movements using function call
+    <div onWheel={function(elem){
+      onScrolling(elem.deltaY)
+    }}>
+      <div className='page1'></div>
+      <div className='page2'></div>
+      <div className='page3'></div>
+    </div>
   )
 }
 
