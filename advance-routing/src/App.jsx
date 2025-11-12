@@ -8,6 +8,8 @@ import About from './pages/About'
 import Men from './pages/Men'
 import Women from './pages/Women'
 import Kids from './pages/Kids'
+import Courses from './pages/Courses'
+import CourseDetail from './pages/CourseDetail'
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
       <Footer />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/courses' element={<Courses />} />
+        <Route path='/courses/:id' element={<CourseDetail />} />
         <Route path='/about' element={<About />} />
         <Route path='/product' element={<Product />}>
           <Route path='men' element={<Men />} />
