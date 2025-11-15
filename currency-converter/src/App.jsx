@@ -4,7 +4,8 @@ import InputBox from './components/InputBox'
 const App = () => {
   return (
     <div>
-      <InputBox />
+      <InputBox /> // extracting the data from inputbox.jsx 
+      
     </div>
   )
 }
