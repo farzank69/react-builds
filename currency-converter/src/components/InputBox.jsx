@@ -32,7 +32,8 @@ const InputBox = () => {
           onChange={(e)=>{onCurrencyChange && onCurrencyChange(e.target.value)}}
           disabled={currencyDisabled}
         >
-          
+
+
         </select>
 
         </div>
